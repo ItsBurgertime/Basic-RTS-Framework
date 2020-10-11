@@ -122,9 +122,14 @@ public class Unit : MonoBehaviour
             SetState(UnitState.Idle);
             return;
         }
-
-        if(Vector3.Distance(transform.position, navAgent.destination) == 0.0f)
+       // Debug.Log(Vector3.Distance(transform.position, navAgent.destination));
+        if (Vector3.Distance(transform.position, navAgent.destination) == 0.0f)
+        {
             SetState(UnitState.Gather);
+
+            return;
+
+        }
     }
 
     // called every frame the 'Gather' state is active
