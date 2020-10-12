@@ -42,9 +42,9 @@ public class GameManager : MonoBehaviour
         }
 
         // if there is more than 1 remaining player, return
-        if(remainingPlayers != 1)
+        if (remainingPlayers > 1)
             return;
 
-        EndScreenUI.instance.SetEndScreen(winner.isMe);
+        EndScreenUI.instance.SetEndScreen(winner && winner.isMe);
     }
 }
